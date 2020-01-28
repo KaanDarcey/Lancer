@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+.btn {
+    width: 150px;
+    height:50px;
+    @include flex($dir:column, $just:center, $align:center);
+    background-color: $highlights;
+    color:$secondaryColor;
+    padding: $padd;
+
+    .btnTitle {
+        font-size: $titleSize;
+        font-weight: $titleWeight;
+    }
+
+    &:active, &:hover {
+        background-color: $secondaryColor;
+        color:$primaryFontColor;
+        outline: 1px $primaryFontColor solid;
+    }
+}
