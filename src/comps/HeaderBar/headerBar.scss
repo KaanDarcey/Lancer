@@ -1,0 +1,32 @@
+@import '../../App.scss';
+
+.header{
+  background-color: $secondaryColor;
+  padding: 1em;
+}
+
+.row{
+  @include flex($dir:row, $just:center, $align:center);
+  h1{
+    font-size: $headerSize;
+    font-weight: $headerWeight;
+    text-align: left;
+    margin: 0;
+    text-transform: uppercase;
+    flex:8;
+  }
+  .iconCont{
+    flex: 1;
+  }
+  .iconTitle{
+    font-weight: 700;
+  }
+  .icon{
+    margin: .5em;
+  }
+  .btnCont{
+    flex: 1;
+    margin: 0 0 0 1.5em; 
+  }
+
+}
