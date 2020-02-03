@@ -1,0 +1,51 @@
+// IMPORTS
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700&display=swap');
+
+/* ========== GENERAL STYLES ========== */
+
+// COLORS
+$primaryColor: #284b63;
+$secondaryColor: #ffffff;
+$thirdColor: #153243;
+$fourthColor: #155590;
+$fifthColor: #e3e1e1;
+$sixthColor: #f1f1f1;
+
+$highlights: #368edf;
+
+
+$primaryFontColor: #000000;
+
+// FONTS
+
+$primaryFont: 'Work Sans', sans-serif;
+
+//headers
+$headerSize: 30pt;
+$headerWeight: 600;
+
+//titles
+$titleSize: 14pt;
+$titleWeight: 700;
+
+//body
+$bodySize: 14pt;
+$bodyWeight: regular;
+
+// POSITIONING
+@mixin flex($dir, $just, $align){
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+}
+
+$padd: 5px;
+
+body{
+  width: 99%;
+  font-family: $primaryFont;
+  font-size: $bodySize;
+  color: $thirdColor;
+}
