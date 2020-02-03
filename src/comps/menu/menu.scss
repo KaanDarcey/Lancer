@@ -1,11 +1,12 @@
 @import '../../App.scss';
 
-.container {
+.menu-container {
+
+    height:100%;
+    flex:1;
     background-color: $primaryColor;
-
     @include flex($dir:column, $just:center, $align:center);
-
-    max-width:100%;
+    overflow: hidden;
 
     .logo {
         width: 100px;
@@ -13,6 +14,16 @@
         background-color: $secondaryColor;
         margin-bottom: 50px;
         margin-top: 50px;
+    }
+
+    .menu-items {
+        padding-left: 30px;
+    }
+    tr:hover, tr:active {
+        background-color: $secondaryColor;
+        color:$primaryFontColor;
+
+        font-weight: $titleWeight;
     }
 
 }
