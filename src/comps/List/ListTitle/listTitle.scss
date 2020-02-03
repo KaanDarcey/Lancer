@@ -1,0 +1,21 @@
+@import '../../../App.scss';
+
+.listTitle {
+  text-transform: uppercase;
+  padding: 1em;
+  font-weight: $titleWeight;
+  font-size: $titleSize;
+}
+
+.title{
+  flex: 1;
+  padding: .5em;
+}
+
+.projectTitle{
+  flex: 2;
+}
+
+.emp{
+  flex:.25;
+}
