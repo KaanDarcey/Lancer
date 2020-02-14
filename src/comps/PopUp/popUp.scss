@@ -1,0 +1,43 @@
+@import '../../App.scss';
+
+.popUp-shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.popUp-border {
+    width:500px;
+    height:700px;
+    background: linear-gradient(180deg, rgba(40,75,99,1) 0%, rgba(54,142,223,1) 100%);
+
+    position: absolute;
+
+    @include flex($dir:column, $just:center, $align:center);
+}
+
+.popUp-container {
+    position: relative;
+    width: 450px;
+    height:650px;
+    background-color: $secondaryColor;
+
+    @include flex($dir:column, $just:top, $align:center);
+}
+
+.popUp-title {
+    font-family: $primaryFont;
+    color: $primaryFontColor;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.popUp-close {
+    position: absolute;
+    top:20px;
+    right:20px;
+}
