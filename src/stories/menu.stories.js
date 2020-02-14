@@ -1,5 +1,6 @@
 import React from 'react';
-import MenuItem from '../comps/menu/menuItem';
+import Menu from '../comps/Menu';
+import MenuItem from '../comps/Menu/MenuItem';
 
 export default {
     title: 'Menu',
@@ -8,4 +9,8 @@ export default {
 
   export const defaultMenuItem = () => {
     return <MenuItem />
+  };
+
+  export const defaultMenu = () => {
+    return <Menu />
   };
