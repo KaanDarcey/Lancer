@@ -1,0 +1,29 @@
+@import '../../App.scss';
+
+.counter-container {
+    width:300px;
+    height:300px;
+    background-color: $sixthColor;
+    @include flex($dir:column, $just:center, $align:center);
+    padding:10px;
+    border-radius: 5px;
+}
+
+.counter-title {
+    color:$primaryColor;
+    font-family: $primaryFont;
+    color:$primaryColor;
+    font-size: $subHSize;
+    font-weight: $subHWeight;
+    margin:0px;
+}
+
+.counter-value {
+    color:$primaryColor;
+    font-family: $primaryFont;
+    color:$primaryColor;
+    font-size: 120pt;
+    font-weight: $headerWeight;
+    margin: 0px;
+    margin-top: 20px;
+}
