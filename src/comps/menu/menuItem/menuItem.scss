@@ -1,13 +1,12 @@
 @import '../../../App.scss';
 
-.menu {
+.menu-item {
     width:100%;
     height:50px;
-    @include flex($dir:row, $just:center, $align:center);
+    @include flex($dir:row, $just:left, $align:center);
     background-color: $primaryColor;
     color:$secondaryColor;
     padding:$padd;
-    // padding-left: 220px;
 
     &:active, &:hover {
         background-color: $secondaryColor;
@@ -16,7 +15,15 @@
         font-weight: $titleWeight;
     }
 
-    .title {
-        margin-left: 10px;
-    }
+}
+
+.itemIcon {
+    flex:1;
+    @include flex($dir:row, $just:flex-end, $align:center);
+}
+
+.title {
+    margin-left: 5px;
+    flex:1.5;
+    display:flex;
 }
