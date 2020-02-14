@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+.form-container {
+    width:450px;
+    height:700px;
+    @include flex($dir:column, $just:center, $align:center);
+    position: relative;
+    padding:10px;
+}
+
+// .form-header {
+//     position: absolute;
+//     left:20px;
+//     font-family: $primaryFont;
+//     font-size: $subHize;
+//     font-weight: $subHWeight;
+// }
+
+.form-row {
+    width:100%;
+    @include flex($dir:row, $just:space-around, $align:center);
+}
+
+.form-title {
+    font-family: $primaryFont;
+    font-size: $titleSize;
+    font-weight: $titleWeight;
+}
+
+.form-descr {
+    width: 200px;
+    background-color:$sixthColor;
+    border:none;
+    padding:5px;
+    font-family: $primaryFont;
+}
+
+.form-descr-display {
+    background-color:white;
+    border:none;
+    padding:5px;
+    font-family: $primaryFont;
+    width: 200px;
+    font-size: $bodySize;
+    font-weight: $bodyWeight;
+}
