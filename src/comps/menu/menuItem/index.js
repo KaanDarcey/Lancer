@@ -3,8 +3,8 @@ import './menuItem.scss';
 
 function MenuItem({icon,title}){
     return(
-        <div className='menu'>
-            {icon}
+        <div className='menu-item'>
+            <i className='itemIcon'>{icon}</i>
             <p className='title'>{title}</p>
         </div>
     )
