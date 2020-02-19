@@ -1,0 +1,31 @@
+@import '../../App.scss';
+
+.timerCont{
+  background-color: $secondaryColor;
+  padding: 1em;
+
+}
+
+.timerHeading{
+  font-size: $bodySize;
+  text-transform: uppercase;
+}
+
+.timer{
+  @include flex($dir:row, $just:left, $align:left);
+
+  .iconBtn{
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  .icon{
+    color: $highlights;
+    font-size: 7em;
+    padding-right: .25em;
+  }
+
+  .time>span{
+    font-size: 64pt;
+  }
+}

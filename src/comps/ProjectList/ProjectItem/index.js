@@ -1,8 +1,7 @@
 import React from 'react';
-import './listItem.scss';
-import {FaEdit} from 'react-icons/fa';
+import './projectItem.scss';
 
-function ListItem({projectName, clientName, endDate, status}){
+function ProjectItem({projectName, clientName, endDate, status, act}){
   return(
     <div className="row listGroup">
       <div className="listItem projectName">{projectName}</div>
@@ -14,16 +13,17 @@ function ListItem({projectName, clientName, endDate, status}){
         <div className="progressValue" style={{width: `${status}`}}></div>
         </div>
       </div>
-      <div className="listItem editIcon" ><FaEdit/></div>
+      <div className="listItem editIcon" >{act}</div>
     </div>
   )
 }
 
-ListItem.defaultProps = {
-  projectName: "Default Project Name",
+ProjectItem.defaultProps = {
+ projectName: "Default Project Name",
   clientName: "Default Client Name",
   endDate: "Default End Date",
   status: "Default Status",
+  act: "Default Action"
 };
 
-export default ListItem;
+export default ProjectItem;

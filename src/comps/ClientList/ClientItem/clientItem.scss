@@ -1,0 +1,28 @@
+@import '../../../App.scss';
+
+.clientListCont {
+  text-transform: uppercase;
+  padding: 1em;
+  font-weight: 500;
+  border-radius: .2em;
+}
+
+.clientListCont:hover{
+  background-color: $sixthColor;
+  font-weight: 700;
+}
+
+.clientList{
+  flex:1;
+  padding: .5em;
+  text-align: center;
+}
+
+.clientEmail{
+  text-transform: lowercase;
+}
+
+.editIcon{
+  flex:.25;
+  @include flex($dir:column, $just:center, $align:center);
+}

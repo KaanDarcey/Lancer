@@ -1,50 +1,55 @@
 import React from 'react';
-import './list.scss';
+import './projectList.scss';
 
-import ListItem from './ListItem';
-import ListTitle from './ListTitle';
+import ProjectItem from './ProjectItem';
+import ProjectHeader from './ProjectHeader';
 
-function List({items, titles}){
+import {FaEdit} from 'react-icons/fa';
+
+function ProjectList({items, titles}){
   return(
       <div className="list">
         <div id="" className="">
           {titles.map((t,i)=>{
-              return <ListTitle {...t}/>
+              return <ProjectHeader {...t}/>
           })}
         </div>    
         <div id="" className="">
           {items.map((o,i)=>{
-              return <ListItem {...o}/>
+              return <ProjectItem {...o}/>
           })}
         </div>
       </div>      
   )
 }
 
-List.defaultProps = {
+ProjectList.defaultProps = {
   items:[
     {
-      projectName: "Project 1",
+     projectName: "Project 1",
       clientName: "Client 1",
       endDate: "January 01, 2020",
       status: "100%",
+      act: <FaEdit/>
     },
     {
-      projectName: "Project 2",
+     projectName: "Project 2",
       clientName: "Client 2",
       endDate: "January 01, 2020",
       status: "80%",
+      act: <FaEdit/> 
     },
   ],
   titles:[
     {
-      projectName: "Default Title",
+     projectName: "Default Title",
       clientName: "Default Title",
       endDate: "Default Title",
-      status: "Default Title",    
+      status: "Default Title",
+      act:"Default Title"
     },
   ]
 
 };
 
-export default List;
+export default ProjectList;
