@@ -4,18 +4,22 @@
   text-transform: uppercase;
   padding: 1em;
   font-weight: $titleWeight;
-  font-size: $titleSize;
+  font-size: 12pt;
+  padding: .5em;
+  color: #B4B8AB;
+  @include flex($dir:row, $just:space-between, $align:center);
 }
 
-.title{
+.listHeader{
   flex: 1;
   padding: .5em;
 }
 
-.projectTitle{
+.projectlistHeader{
   flex: 2;
 }
 
-.emp{
+.actHeader{
   flex:.25;
 }
+

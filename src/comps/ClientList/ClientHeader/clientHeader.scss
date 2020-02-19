@@ -1,0 +1,21 @@
+@import '../../../App.scss';
+
+.clientHeaderCont {
+  text-transform: uppercase;
+  padding: 1em;
+  font-weight: $titleWeight;
+  font-size: 12pt;
+  padding: .5em;
+  color: #B4B8AB;
+  @include flex($dir:row, $just:space-between, $align:center);
+}
+
+.clientHeader{
+  flex: 1;
+  padding: .5em;
+}
+
+.actHeader{
+  flex:.25;
+}
+
