@@ -22,19 +22,19 @@ $primaryFontColor: #000000;
 $primaryFont: 'Work Sans', sans-serif;
 
 //headers
-$headerSize: 30pt;
+$headerSize: 24pt;
 $headerWeight: 600;
 
 //sub-headings
-$subHSize: 16pt;
+$subHSize: 14pt;
 $subHWeight: 700;
 
 //titles
-$titleSize: 14pt;
+$titleSize: 12pt;
 $titleWeight: 700;
 
 //body
-$bodySize: 14pt;
+$bodySize: 11pt;
 $bodyWeight: regular;
 
 // POSITIONING
@@ -48,7 +48,8 @@ $bodyWeight: regular;
 $padd: 5px;
 
 body{
-  width: 99%;
+  height: 100%;
+  width: 100%;
   font-family: $primaryFont;
   font-size: $bodySize;
   color: $thirdColor;

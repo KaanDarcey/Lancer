@@ -51,7 +51,7 @@ export const DefaultClientList = () =>{
 export const ClientListPage = () => {
   return <div className="" style={{display:"flex", flexDirection:"row"}}>
     <Menu style={{display:"flex", flex:1}}/>
-   <div style={{display:"flex", flex:2, flexDirection:'column'}}>
+   <div style={{display:"flex", flex:4, flexDirection:'column'}}>
    <Header
       headerTitle="Clients"
       iconTitle="Sort"
