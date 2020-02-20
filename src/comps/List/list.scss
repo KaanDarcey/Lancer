@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+table{
+  width: 100%;
+}
+
+table, td{
+  border-bottom: 1px solid $thirdColor;
+  border-collapse: collapse;
+}
+
+
+h1{
+  font-size: $subHSize;
+}
