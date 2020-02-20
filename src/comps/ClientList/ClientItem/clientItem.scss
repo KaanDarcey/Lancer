@@ -5,6 +5,9 @@
   padding: 1em;
   font-weight: 500;
   border-radius: .2em;
+  border: 1px solid $fifthColor;
+  margin: .5em;
+  
 }
 
 .clientListCont:hover{
@@ -18,8 +21,15 @@
   text-align: center;
 }
 
+
+.clientImage>svg{
+  width: 2em;
+  height: 2em;
+}
+
 .clientEmail{
   text-transform: lowercase;
+  color: $highlights;
 }
 
 .editIcon{

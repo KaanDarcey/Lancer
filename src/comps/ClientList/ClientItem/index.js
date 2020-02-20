@@ -1,9 +1,10 @@
 import React from 'react';
 import './clientItem.scss';
 
-function ClientItem({clientName, company, phone, email, totalProjects, act}){
+function ClientItem({clientImage, clientName, company, phone, email, totalProjects, act}){
   return(
     <div className="row clientListCont">
+      <div className="clientList clientImage">{clientImage}</div>
       <div className="clientList">{clientName}</div>
       <div className="clientList">{company}</div>
       <div className="clientList">{phone}</div>
@@ -15,6 +16,7 @@ function ClientItem({clientName, company, phone, email, totalProjects, act}){
 }
 
 ClientItem.defaultProps = {
+  clientImage: "Default",
  clientName: "Default Project Name",
   company: "Default Client Name",
   phone: "Default End Date",
