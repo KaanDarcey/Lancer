@@ -12,7 +12,7 @@
 
 .popUp-border {
     width:500px;
-    height:700px;
+    height:500px;
     background: linear-gradient(180deg, rgba(40,75,99,1) 0%, rgba(54,142,223,1) 100%);
 
     position: absolute;
@@ -22,8 +22,8 @@
 
 .popUp-container {
     position: relative;
-    width: 450px;
-    height:650px;
+    width: 475px;
+    height:475px;
     background-color: $secondaryColor;
 
     @include flex($dir:column, $just:top, $align:center);
