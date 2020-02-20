@@ -6,11 +6,13 @@ import Menu from '../comps/Menu';
 import ProjectList from '../comps/ProjectList';
 import Header from '../comps/HeaderBar';
 import Button from '../comps/Button';
-
-import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
 import Search from '../comps/Search';
 
-var icon = <FaEdit/>;
+import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
+import {MdMoreVert} from "react-icons/md";
+
+
+var icon = <MdMoreVert/>;
 
 export default {
   title: 'ProjectList',
@@ -24,13 +26,15 @@ var ProjectItems = [
     endDate: "May 26, 2019",
     status: "60%",
     act: icon,
+    completed: false
   },
   {
    projectName: "Scope Media - Motion Graphics",
     clientName: "Paul Tan",
     endDate: "June 05, 2020",
     status: "40%",
-    act: icon,    
+    act: icon,
+    completed: true
   }
 ];
 
@@ -38,9 +42,9 @@ var ProjectTitles = [
   {
    projectName: "Project Name",
     clientName: "Client Name",
-    endDate: "End Date",
+    endDate: "Due Date",
     status: "Progress",
-    act: "Edit",
+    act: "Completed",
   },
 ];
 
@@ -50,7 +54,7 @@ export const DefaultList = () => {
 
 export const ProjectListPage = () => {
   return <div className="" style={{display:"flex", flexDirection:"row"}}>
-  <Menu style={{display:"flex", flex:1}}/>
+  <Menu style={{display:"flex", flex:.1}}/>
  <div style={{display:"flex", flex:2, flexDirection:'column'}}>
     <Header
       headerTitle="Projects"

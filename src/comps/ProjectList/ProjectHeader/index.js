@@ -8,7 +8,8 @@ function ProjectHeader({projectName, clientName, endDate, status, act}){
       <div className="listHeader">{clientName}</div>
       <div className="listHeader">{endDate}</div>
       <div className="listHeader">{status}</div>
-      <div className="listHeader actHeader">{act}</div>
+      <div className="listHeader checkbox">{act}</div>
+      <div className="listHeader iconHeader"></div>
     </div>
   )
 }

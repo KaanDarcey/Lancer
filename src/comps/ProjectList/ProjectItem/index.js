@@ -1,5 +1,6 @@
 import React from 'react';
 import './projectItem.scss';
+import Checkbox from '../../Checkbox';
 
 function ProjectItem({projectName, clientName, endDate, status, act}){
   return(
@@ -13,7 +14,10 @@ function ProjectItem({projectName, clientName, endDate, status, act}){
         <div className="progressValue" style={{width: `${status}`}}></div>
         </div>
       </div>
-      <div className="listItem editIcon" >{act}</div>
+      <div className="listItem checkbox">
+        <Checkbox/>
+      </div>
+      <div className="listItem actIcon" >{act}</div>
     </div>
   )
 }
@@ -23,7 +27,8 @@ ProjectItem.defaultProps = {
   clientName: "Default Client Name",
   endDate: "Default End Date",
   status: "Default Status",
-  act: "Default Action"
+  act: "Default Action",
+  completed: false
 };
 
 export default ProjectItem;
