@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.scss';
 
-function Button({title}){
+function Button({title, scale}){
     return(
         <div className='btn'>
             <p className='btnTitle' >{title}</p>

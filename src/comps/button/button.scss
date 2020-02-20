@@ -1,8 +1,8 @@
 @import '../../App.scss';
 
 .btn {
-    width: 150px;
-    height:50px;
+    width: 130px;
+    height:40px;
     @include flex($dir:column, $just:center, $align:center);
     background-color: $highlights;
     color:$secondaryColor;
