@@ -1,0 +1,27 @@
+@import '../../../App.scss';
+
+.AddForm-container {
+    width:400px;
+    height:350px;
+    margin-left: 20px;
+    // height:400px;
+    @include flex($dir:column, $just:flex-end, $align:flex-end);
+}
+
+.AddForm-input {
+    width: 100%;
+    padding: 3px;
+    font-family: $primaryFont;
+    border:1px solid #D3D3D3;
+    margin-bottom: 10px;
+}
+
+.AddForm-text {
+    width: 100%;
+    height: 200px;
+    padding: 3px;
+    resize: none;
+    font-family: $primaryFont;
+    font-size: 8pt;
+    border:1px solid #D3D3D3;
+}
