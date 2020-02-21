@@ -2,7 +2,7 @@ import React from 'react';
 import './menu.scss';
 import MenuItem from './MenuItem';
 import Button from '../Button';
-import {FaHome,FaCalendarAlt, FaChartBar, FaRegClock, FaRegUserCircle, FaWallet, FaPowerOff, FaUsers, FaProjectDiagram} from 'react-icons/fa';
+import {FaCalendarAlt, FaChartBar, FaRegUserCircle, FaPowerOff, FaUsers, FaProjectDiagram} from 'react-icons/fa';
 
 function Menu({logo, active}, setCurrentPage={setCurrentPage}){
     return(

@@ -2,15 +2,12 @@ import React from 'react';
 import './TaskPage.scss';
 
 import Header from '../../comps/HeaderBar';
-import Search from '../../comps/Search';
 import Form from '../../comps/Form';
 import Timer from '../../comps/Timer';
 import AddForm from '../../comps/Form/AddForm';
-import ProjectItem from '../../comps/ProjectList/ProjectItem';
-import ProjectHeader from '../../comps/ProjectList/ProjectHeader';
+import List from '../../comps/List';
 
 import {FaPlayCircle} from 'react-icons/fa';
-import {FaSearch} from 'react-icons/fa'
 
 function TaskPage(){
 
@@ -33,7 +30,9 @@ function TaskPage(){
                     <div className='TaskPage-timer'>
                         <h2 className='TaskPage-current-title'>Current Task </h2>
                         {/* <h4 className='TaskPage-current-title'>Current Task</h4> */}
-                        <p className='TaskPage-current-title TaskPage-current-grey'>Prototyping in Figma</p>
+                        <p className='TaskPage-current-title TaskPage-current-grey'>Selected Task Name</p>
+                        <p className='TaskPage-current-title'>Descirption of selected task </p>
+                        <p className='TaskPage-current-title'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                         <Timer
                         icon={<FaPlayCircle/>}
                         hh="00"
@@ -43,11 +42,7 @@ function TaskPage(){
                     </div>
                     <div className='TaskPage-taskList'>
                     <h2 className='TaskPage-current-title'>All Tasks </h2>
-                        <ProjectHeader/>
-                        <ProjectItem />
-                        <ProjectItem />
-                        <ProjectItem />
-                        <ProjectItem />
+                        <List />
                     </div>
                 </div>
             </div>

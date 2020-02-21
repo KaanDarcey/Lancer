@@ -45,9 +45,11 @@
 
 .TaskPage-current-grey {
     color:rgba(150,150,150,1);
+    font-size: 14pt;
+    margin-top: 30px;
 }
 
 .TaskPage-taskList {
     @include flex($dir:column,$just:center,$align:left);
-    margin-top: 50px;
+    margin-top: 195px;
 }

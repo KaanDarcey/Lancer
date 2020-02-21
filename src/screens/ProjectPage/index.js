@@ -4,7 +4,7 @@ import './ProjectPage.scss';
 import ProjectList from '../../comps/ProjectList';
 import Header from '../../comps/HeaderBar';
 import Button from '../../comps/Button';
-import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
+import {FaSortAmountUp, FaSearch} from 'react-icons/fa'
 import Search from '../../comps/Search';
 
 function ProjectPage(){

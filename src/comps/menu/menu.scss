@@ -7,7 +7,7 @@
     flex:1;
     background-color: $primaryColor;
     @include flex($dir:column, $just:space-around, $align:center);
-    overflow: hidden; 
+    // overflow: hidden; 
 
     .logo {
         width: 100px;
@@ -25,4 +25,5 @@
     background-color: $primaryColor;
     @include flex($dir:column, $just:center, $align:center);
     overflow: hidden; 
+    background-color: rgba(0,0,0,0);
 }
