@@ -2,8 +2,9 @@
 
 .timerCont{
   background-color: $secondaryColor;
-  padding: 1em;
-
+  // padding: 1em;
+  margin-top: 60px;
+  margin-left:10px;
 }
 
 .timerHeading{
@@ -13,6 +14,7 @@
 
 .timer{
   @include flex($dir:row, $just:left, $align:left);
+  margin-top: 30px;
 
   .iconBtn{
     background-color: transparent;
@@ -26,6 +28,6 @@
   }
 
   .time>span{
-    font-size: 64pt;
+    font-size: 45pt;
   }
 }
