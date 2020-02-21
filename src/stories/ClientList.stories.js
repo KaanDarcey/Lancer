@@ -5,9 +5,10 @@ import Button from '../comps/Button';
 import Menu from '../comps/Menu';
 import Search from '../comps/Search';
 
-import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
+import {FaSortAmountUp, FaEdit, FaSearch, FaRegUserCircle} from 'react-icons/fa'
 
 var icon = <FaEdit/>;
+var clientImage = <FaRegUserCircle/>
 
 export default {
   title: 'ClientList',
@@ -16,6 +17,7 @@ export default {
 
 var ClientItems = [
   {
+    clientImage: clientImage,
     clientName: "Alex Rack",
     company: "OW Solutions",
     phone: "778-123-4567",
@@ -24,6 +26,7 @@ var ClientItems = [
     act: icon,
   },
   {
+    clientImage: clientImage,
     clientName: "Jane Doe",
     company: "Reva Solutions",
     phone: "778-123-4567",

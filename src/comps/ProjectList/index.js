@@ -5,6 +5,9 @@ import ProjectItem from './ProjectItem';
 import ProjectHeader from './ProjectHeader';
 
 import {FaEdit} from 'react-icons/fa';
+import {MdMoreVert} from "react-icons/md";
+
+var icon = <MdMoreVert/>;
 
 function ProjectList({items, titles}){
   return(
@@ -30,14 +33,14 @@ ProjectList.defaultProps = {
       clientName: "Client 1",
       endDate: "January 01, 2020",
       status: "100%",
-      act: <FaEdit/>
+      act: icon
     },
     {
      projectName: "Project 2",
       clientName: "Client 2",
       endDate: "January 01, 2020",
       status: "80%",
-      act: <FaEdit/> 
+      act: icon
     },
   ],
   titles:[
