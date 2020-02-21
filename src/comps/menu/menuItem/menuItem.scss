@@ -7,6 +7,7 @@
     background-color: $primaryColor;
     color:$secondaryColor;
     padding:$padd;
+    font-size: 12pt;
 
     &:active, &:hover {
         background-color: $secondaryColor;
@@ -15,6 +16,13 @@
         font-weight: $titleWeight;
     }
 
+}
+
+.highlight {
+    background-color: $secondaryColor;
+    color:$primaryFontColor;
+
+    font-weight: $titleWeight;
 }
 
 .itemIcon {
