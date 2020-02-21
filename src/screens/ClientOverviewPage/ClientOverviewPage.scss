@@ -1,0 +1,55 @@
+@import '../../App.scss';
+
+.ClientOVP-container {
+    display:"flex"; 
+    flex-direction:"column";
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+}
+
+.ClientOVP-content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.ClientOVP-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding: 3em;
+    margin-top: -50px;
+}
+
+.ClientOVP-form-title {
+    margin: 10px;
+    margin-left: 10px;
+} 
+
+.ClientOVP-current {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    margin-top: -50px;
+}
+
+.ClientOVP-timer {
+    height:250px;
+}
+
+.ClientOVP-current-title {
+    margin:10px;
+}
+
+.ClientOVP-current-grey {
+    color:rgba(150,150,150,1);
+    font-size: 14pt;
+    margin-top: 30px;
+}
+
+.ClientOVP-taskList {
+    @include flex($dir:column,$just:center,$align:left);
+    margin-top: 195px;
+}
