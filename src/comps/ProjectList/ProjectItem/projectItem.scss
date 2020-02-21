@@ -5,6 +5,9 @@
   padding: 1em;
   font-weight: 500;
   border-radius: .2em;
+  border: 1px solid $fifthColor;
+  margin: .5em;
+  @include flex($dir:row, $just:space-between, $align:center);
 }
 
 .listGroup:hover{
@@ -41,7 +44,11 @@
   flex: 2;
 }
 
-.editIcon{
+.actIcon{
   flex:.25;
   @include flex($dir:column, $just:center, $align:center);
+}
+
+.checkbox{
+  flex: .25;
 }
