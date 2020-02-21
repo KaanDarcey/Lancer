@@ -1,0 +1,19 @@
+@import '../../App.scss';
+
+.SchedulePage-container {
+    display:"flex"; 
+    flex-direction:"column";
+    justify-content: center;
+    align-items: center;
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+    overflow: hidden;
+}
+
+.SchedulePage-footer {
+    @include flex($dir:row, $just:center, $align:center);
+    padding:20px;
+    width: 90%;
+    overflow: hidden;
+}
