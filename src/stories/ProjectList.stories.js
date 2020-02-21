@@ -11,6 +11,9 @@ import Search from '../comps/Search';
 import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
 import {MdMoreVert} from "react-icons/md";
 
+import Form from '../comps/Form';
+import Timer from '../comps/Timer';
+import {FaPlayCircle} from 'react-icons/fa';
 
 var icon = <MdMoreVert/>;
 
@@ -54,8 +57,10 @@ export const DefaultList = () => {
 
 export const ProjectListPage = () => {
   return <div className="" style={{display:"flex", flexDirection:"row"}}>
-  <Menu style={{display:"flex", flex:.1}}/>
- <div style={{display:"flex", flex:2, flexDirection:'column'}}>
+    
+  <Menu style={{display:"flex", flex:1}}/>
+ <div style={{display:"flex", flex:4, flexDirection:'column'}}>
+
     <Header
       headerTitle="Projects"
       iconTitle="Sort"
@@ -64,17 +69,46 @@ export const ProjectListPage = () => {
         title="Create Project"/>}
     />
     <div style={{display:"flex", flexDirection:"row", padding:"1em"}}>
-      <div style={{display:"flex", flexDirection:"row", flex:2}}>
-        <Button title="Current"/>
-        <Button title="Completed"/>
-      </div>
       <Search
       icon={<FaSearch/>}
       />
     </div>
-    <ProjectList
-      titles ={ProjectTitles}
-      items={ProjectItems}/>
+    <ProjectList />
+  </div>
+  </div>
+}
+
+var taskFormTitles = ["ClIENT NAME", "PROJECT NAME", "EMAIL", "PHONE", "ADDRESS", "START DATE", "END DATE"];
+
+export const TaskPage = () => {
+  return <div className="" style={{display:"flex", flexDirection:"row"}}>
+  <Menu style={{display:"flex", flex:1}}/>
+ <div style={{display:"flex", flex:4, flexDirection:'column'}}>
+    <Header
+      headerTitle="Project Name"
+    />
+    <div style={{display:"flex", flexDirection:"row", padding:"1em"}}>
+      <Search
+      icon={<FaSearch/>}
+      />
+    </div>
+    <div style={{display:'flex', flexDirection:'row'}}>
+      <div style={{display:"flex", flexDirection:"column", padding:"3em", marginTop:'-50px'}}>
+        <h2 style={{margin:'10px', marginLeft:'-10px'}}>Client Information</h2>
+        <Form title={taskFormTitles} btnTitle='Save Changes'/>
+      </div>
+      <div style={{display:"flex", flexDirection:"column", padding:"3em", marginTop:'-50px'}}>
+      <h2 style={{margin:'10px'}}>Project Task Name </h2>
+      <h4 style={{margin:'10px'}}>Current Task</h4>
+      <p style={{margin:'10px', color:'rgba(200,200,200,1)'}}>Prototyping in Figma</p>
+        <Timer
+            icon={<FaPlayCircle/>}
+            hh="00"
+            mm="01"
+            ss="08"
+        />
+      </div>
+    </div>
   </div>
   </div>
 }

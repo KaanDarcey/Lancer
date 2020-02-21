@@ -1,0 +1,21 @@
+@import '../../App.scss';
+
+.ClientPage-container {
+    display:"flex"; 
+    flex-direction:"column";
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+}
+
+.ClientPage-search {
+    display: flex;
+    flex-direction: row;
+    padding:1em;
+}
+
+.ClientPage-btn {
+    display: flex;
+    flex-direction: row;
+    flex:2;
+}

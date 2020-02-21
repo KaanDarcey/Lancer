@@ -1,0 +1,53 @@
+@import '../../App.scss';
+
+.TaskPage-container {
+    display:"flex"; 
+    flex-direction:"column";
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+}
+
+.TaskPage-content {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.TaskPage-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    padding: 3em;
+    margin-top: -50px;
+}
+
+.TaskPage-form-title {
+    margin: 10px;
+    margin-left: 10px;
+} 
+
+.TaskPage-current {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    margin-top: -50px;
+}
+
+.TaskPage-timer {
+    height:250px;
+}
+
+.TaskPage-current-title {
+    margin:10px;
+}
+
+.TaskPage-current-grey {
+    color:rgba(150,150,150,1);
+}
+
+.TaskPage-taskList {
+    @include flex($dir:column,$just:center,$align:left);
+    margin-top: 50px;
+}

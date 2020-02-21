@@ -1,9 +1,16 @@
 import React from 'react';
 import './menuItem.scss';
 
-function MenuItem({icon,title}){
+function MenuItem({icon,title, highlight}, setCurrentPage={setCurrentPage}){
+
+    var currentP = 'menu-item';
+
+    if(highlight === title){
+        currentP = 'menu-item highlight';
+    }
+
     return(
-        <div className='menu-item'>
+        <div className={currentP} onClick={()=>{setCurrentPage({title})}}>
             <i className='itemIcon'>{icon}</i>
             <p className='title'>{title}</p>
         </div>
@@ -12,7 +19,8 @@ function MenuItem({icon,title}){
 
 MenuItem.defaultProps = {
     icon:'',
-    title:'default title'
+    title:'default title',
+    hightlight:'Dashboard'
 }
 
 export default MenuItem;
