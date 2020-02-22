@@ -5,7 +5,8 @@
     height:100%;
     position: fixed;
     flex:1;
-    background-color: $primaryColor;
+    // background-color: $primaryColor;
+    background: linear-gradient(180deg, $primaryColor 0%, $thirdColor 100%);
     @include flex($dir:column, $just:space-around, $align:center);
     // overflow: hidden; 
 
@@ -13,7 +14,6 @@
         width: 100px;
         height:100px;
         background-color: $secondaryColor;
-        margin-bottom: 50px;
         margin-top: 50px;
     }
 }
@@ -26,4 +26,14 @@
     @include flex($dir:column, $just:center, $align:center);
     overflow: hidden; 
     background-color: rgba(0,0,0,0);
+}
+
+.menu-top img {
+    border: 10px $thirdColor solid;
+}
+
+.menu-logo-title {
+    font-size: 16pt;
+    margin-bottom: 50px;
+    color:$thirdColor;
 }
