@@ -15,26 +15,6 @@
   font-weight: 700;
 }
 
-.progressBar{
-  @include flex($dir:column, $just:center, $align:center);
-}
-
-.progressCont{
-  -webkit-appearance: none;
-  background-color: $fifthColor;
-  border-radius: 1em;
-  border:0;
-  height: 1em;
-  width: 100%;
-}
-
-.progressValue{
-  position: relative;
-  background-color: $highlights;
-  height: 1em;
-  border-radius: 1em;
-}
-
 .listItem{
   flex:1;
   padding: .5em;

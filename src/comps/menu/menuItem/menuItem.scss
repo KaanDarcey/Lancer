@@ -18,7 +18,11 @@
 
 }
 
-.highlight {
+.highlight{
+  width: 100%;
+}
+
+.highlight > div{
     background-color: $secondaryColor;
     color:$primaryFontColor;
 
