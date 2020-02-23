@@ -8,39 +8,24 @@ import SchedulePage from './screens/SchedulePage';
 import AddTaskPage from './screens/AddTaskPage';
 import ClientOverviewPage from './screens/ClientOverviewPage';
 
+import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
+
 function App() {
 
-  const [currentPage, setCurrentPage] = useState('ClientOverview');
-
-  var page = <ClientPage />;
-
-  // if(currentPage === 'Dashboard'){
-  //   // page = <DashboardPage />
-  // } else
-  if(currentPage === 'Schedule'){
-    page = <SchedulePage />
-  } else
-  if(currentPage === 'Projects'){
-    page = <ProjectPage />
-  } else
-  if(currentPage === 'TaskPage'){
-    page = <TaskPage />
-  } else
-  if(currentPage === 'ClientPage'){
-    page = <ClientPage />
-  } else
-  if(currentPage === 'AddTask'){
-    page = <AddTaskPage />
-  } else
-  if(currentPage === 'ClientOverview'){
-    page = <ClientOverviewPage />
-  }
-
   return (
+    <Router>
     <div className="App" style={{display:'flex', flexDirection:'row', height:'100vh', width:'100vw'}}>
-      <Menu active={currentPage} setCurrentPage={setCurrentPage}/>
-      {page}
+      <Menu />
+      <Switch>
+          <Route path="/ProjectPage">
+            <ProjectPage />
+          </Route>
+          <Route path="/ClientPage">
+            <ClientPage />
+          </Route>
+        </Switch>
     </div>
+    </Router>
   );
 }
 

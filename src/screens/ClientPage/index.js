@@ -4,16 +4,27 @@ import './ClientPage.scss';
 import Header from '../../comps/HeaderBar';
 import Button from '../../comps/Button';
 import ClientList from '../../comps/ClientList';
-import {FaSortAmountUp, FaEdit, FaSearch} from 'react-icons/fa'
+import {FaSortAmountUp, FaEdit, FaSearch, FaRegUserCircle} from 'react-icons/fa'
 import Search from '../../comps/Search';
 
 function ClientPage() {
 
     var icon = <FaEdit/>;
+    var clientImage = <FaRegUserCircle/>
 
     var ClientItems = [
         {
-          clientName: "Alex Rack",
+          clientImage: clientImage,
+          clientName: "David So",
+          company: "Reva Solutions",
+          phone: "778-123-4567",
+          email:"client@email.com",
+          totalProjects:"1",
+          act: icon,
+        },
+        {
+          clientImage: clientImage,
+          clientName: "Paul Tan",
           company: "OW Solutions",
           phone: "778-123-4567",
           email:"client@email.com",
@@ -21,13 +32,32 @@ function ClientPage() {
           act: icon,
         },
         {
-          clientName: "Jane Doe",
-          company: "Reva Solutions",
+          clientImage: clientImage,
+          clientName: "Mike Change",
+          company: "Google",
           phone: "778-123-4567",
           email:"client@email.com",
-          totalProjects:"1",
+          totalProjects:"2",
           act: icon,
-        }
+        },
+        {
+          clientImage: clientImage,
+          clientName: "Kevin Mavas",
+          company: "Amazon",
+          phone: "778-123-4567",
+          email:"client@email.com",
+          totalProjects:"8",
+          act: icon,
+        },
+        {
+          clientImage: clientImage,
+          clientName: "Jake Paul",
+          company: "Grammarly",
+          phone: "778-123-4567",
+          email:"client@email.com",
+          totalProjects:"4",
+          act: icon,
+        },        
       ];
       
       var ClientTitles = [
