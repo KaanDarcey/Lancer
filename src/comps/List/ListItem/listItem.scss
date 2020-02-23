@@ -2,7 +2,21 @@
 
 td{
   padding: .75em;
-  color: #B4B8AB;
+  color: #D3D3D3;
+
+}
+
+tr {
+  &:hover {
+    background-color:$sixthColor;
+
+    td {
+      color:black;
+      font-weight: 500;
+    }
+  }
+
+
 }
 
 .checkbox{

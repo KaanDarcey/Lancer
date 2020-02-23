@@ -1,0 +1,32 @@
+@import '../../App.scss';
+
+.itemSlider-container {
+    width: 200px;
+    height:200px;
+    padding:10px;
+    margin:10px;
+}
+
+.itemSlider-list-container {
+    width: 100%;
+    height:100%;
+    padding:10px;
+    overflow:scroll;
+}
+
+.itemSlider-header {
+    @include flex($dir:row,$just:center,$align:center)
+}
+
+.itemSlider-caption {
+    font-size: 16pt;
+    margin-left: 10px;
+}
+
+.itemSlider-list {
+}
+
+.itemSlider-item {
+    margin: 20px;
+    font-size: 14pt;
+}
