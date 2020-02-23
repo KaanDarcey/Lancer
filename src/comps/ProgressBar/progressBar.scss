@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.progress{
+  @include flex($dir:column, $just:center, $align:center);
+  width: 100%;
+  padding: .5em;
+}
+
+.progressBar{
+  -webkit-appearance: none;
+  background-color: $fifthColor;
+  border-radius: 1em;
+  border:0;
+  height: 1em;
+  width: 100%;
+}
+
+.progressValue{
+  position: relative;
+  background-color: $highlights;
+  height: 1em;
+  border-radius: 1em;
+}
