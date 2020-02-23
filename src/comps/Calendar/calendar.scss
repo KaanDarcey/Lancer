@@ -1,0 +1,58 @@
+@import '../../App.scss';
+
+.calendar-container {
+    width:90%;
+    height:400px;
+
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+
+
+}
+
+.calendar-header {
+    width: 100%;
+    height:80px;
+    background-color: $primaryColor;
+    @include flex($dir:row, $just:space-around, $align:center);
+    // padding:10px;
+    color:$secondaryColor;
+}
+
+.calendar-header-center {
+    @include flex($dir:row, $just:center, $align:center);
+    color:$secondaryColor;
+    font-size: 14pt;
+}
+
+.calendar-month {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.calendar-columns {
+    width: 100%;
+    @include flex($dir:row, $just:space-around, $align:center);
+    padding:10px;
+}
+
+.calendar-col {
+    width:100%;
+    padding: 10px;
+    overflow:scroll;
+    @include flex($dir:column, $just:center, $align:center);
+}
+
+.calendar-day {
+    margin-top:2px;
+}
+
+.calendar-addBtn {
+    color:#32CD32;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

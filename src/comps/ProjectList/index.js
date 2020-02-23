@@ -4,7 +4,6 @@ import './projectList.scss';
 import ProjectItem from './ProjectItem';
 import ProjectHeader from './ProjectHeader';
 
-import {FaEdit} from 'react-icons/fa';
 import {MdMoreVert} from "react-icons/md";
 
 var icon = <MdMoreVert/>;

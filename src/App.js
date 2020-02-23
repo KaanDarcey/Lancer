@@ -4,6 +4,9 @@ import Menu from './comps/Menu';
 import TaskPage from './screens/TaskPage';
 import ProjectPage from './screens/ProjectPage';
 import ClientPage from './screens/ClientPage';
+import SchedulePage from './screens/SchedulePage';
+import AddTaskPage from './screens/AddTaskPage';
+import ClientOverviewPage from './screens/ClientOverviewPage';
 
 import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
 

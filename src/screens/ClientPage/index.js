@@ -1,7 +1,6 @@
 import React from 'react';
 import './ClientPage.scss';
 
-import ProjectList from '../../comps/ProjectList';
 import Header from '../../comps/HeaderBar';
 import Button from '../../comps/Button';
 import ClientList from '../../comps/ClientList';

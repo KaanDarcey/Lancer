@@ -2,7 +2,7 @@ import React from 'react';
 import './menu.scss';
 import MenuItem from './MenuItem';
 import Button from '../Button';
-import {FaHome,FaCalendarAlt, FaChartBar, FaRegClock, FaRegUserCircle, FaWallet, FaPowerOff, FaUsers, FaProjectDiagram} from 'react-icons/fa';
+import {FaCalendarAlt, FaChartBar, FaRegUserCircle, FaPowerOff, FaUsers, FaProjectDiagram} from 'react-icons/fa';
 
 import {
   BrowserRouter as Router,
@@ -16,7 +16,8 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
     return(
         <div className='menu-container'>
             <div className='menu-top'>
-                <img className='logo' src={logo} alt='logo'/>
+                <img className='logo' src={require('../../imgs/LancerLogo.png')} alt='logo'/>
+                <h3 className='menu-logo-title'>LANCER</h3>
             </div>
             <nav className='menu-center'>
                 <NavLink to="/" activeClassName={active}><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
@@ -36,7 +37,7 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
 }
 
 Menu.defaultProps = {
-    logo:'',
+    logo:'../../imgs/LancerLogo.png',
     active: 'Dashboard'
 }
 
