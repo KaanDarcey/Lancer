@@ -24,7 +24,6 @@
     flex:1;
     background-color: $primaryColor;
     @include flex($dir:column, $just:center, $align:center);
-    overflow: hidden; 
     background-color: rgba(0,0,0,0);
 }
 

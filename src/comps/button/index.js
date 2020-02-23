@@ -1,16 +1,17 @@
 import React from 'react';
 import './button.scss';
 
-function Button({title, scale}){
+function Button({title, act}){
     return(
-        <div className='btn'>
+        <div className='btn' onClick={act}>
             <p className='btnTitle' >{title}</p>
         </div>
     )
 }
 
 Button.defaultProps = {
-    title:'default'
+    title:'default',
+    act:''
 };
 
 export default Button;
