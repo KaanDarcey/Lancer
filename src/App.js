@@ -23,6 +23,18 @@ function App() {
           <Route path="/ClientPage">
             <ClientPage />
           </Route>
+          <Route path="/SchedulePage">
+            <SchedulePage />
+          </Route>
+          <Route path="/ClientOverviewPage">
+            <ClientOverviewPage />
+          </Route>
+          <Route path="/TaskPage">
+            <TaskPage />
+          </Route>
+          <Route path="/AddTaskPage">
+            <AddTaskPage />
+          </Route>
         </Switch>
     </div>
     </Router>

@@ -19,12 +19,12 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
                 <img className='logo' src={require('../../imgs/LancerLogo.png')} alt='logo'/>
                 <h3 className='menu-logo-title'>LANCER</h3>
             </div>
-            <nav className='menu-center'>
-                <NavLink to="/" activeClassName={active}><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
-                <NavLink to="/" activeClassName={active}><MenuItem icon={<FaCalendarAlt />} title='Schedule' /></NavLink>
-                <NavLink to="/ProjectPage" activeClassName={active}><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
-                <NavLink to="/ClientPage" activeClassName={active}><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>
-                <NavLink to="/" activeClassName={active}><MenuItem icon={<FaRegUserCircle />} title='Account' /></NavLink>
+            <nav className='menu-center' >
+                <NavLink to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
+                <NavLink to="/SchedulePage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaCalendarAlt />} title='Schedule' /></NavLink>
+                <NavLink to="/ProjectPage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
+                <NavLink to="/ClientPage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>
+                <NavLink to="/" ><MenuItem icon={<FaRegUserCircle style={{ color: 'inherit', textDecoration: 'inherit'}}/>} title='Account' /></NavLink>
             </nav>
             <div className='menu-bottom'>
                 <Button title="Upgrade Now"/>
@@ -38,7 +38,7 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
 
 Menu.defaultProps = {
     logo:'../../imgs/LancerLogo.png',
-    active: 'Dashboard'
+    active: ''
 }
 
 export default Menu;

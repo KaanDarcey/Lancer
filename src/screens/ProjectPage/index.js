@@ -79,9 +79,9 @@ function ProjectPage(){
                 headerTitle="Projects"
                 iconTitle="Sort"
                 icon={<FaSortAmountUp/>}
-                btn={<Button
-                title="Create Project"
-                />}
+                btn={
+                  <Button title="Create Project"/>
+                }
             />
             <div className='ProjectPage-search'>
                 <Search

@@ -2,23 +2,32 @@ import React from 'react';
 import './projectItem.scss';
 import Checkbox from '../../Checkbox';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink
+} from "react-router-dom";
+
 function ProjectItem({projectName, clientName, endDate, status, act}){
   return(
-    <div className="row listGroup">
-      <div className="listItem projectName">{projectName}</div>
-      <div className="listItem">{clientName}</div>
-      <div className="listItem">{endDate}</div>
-      <div className="listItem progressBar">
-        {status}
-        <div className="progressCont">
-        <div className="progressValue" style={{width: `${status}`}}></div>
+    <NavLink to="/TaskPage" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+      <div className="row listGroup">
+        <div className="listItem projectName">{projectName}</div>
+        <div className="listItem">{clientName}</div>
+        <div className="listItem">{endDate}</div>
+        <div className="listItem progressBar">
+          {status}
+          <div className="progressCont">
+          <div className="progressValue" style={{width: `${status}`}}></div>
+          </div>
         </div>
+        <div className="listItem checkbox">
+          <Checkbox/>
+        </div>
+        <div className="listItem actIcon" >{act}</div>
       </div>
-      <div className="listItem checkbox">
-        <Checkbox/>
-      </div>
-      <div className="listItem actIcon" >{act}</div>
-    </div>
+    </NavLink>
   )
 }
 
