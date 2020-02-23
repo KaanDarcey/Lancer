@@ -13,12 +13,17 @@
 .clientListCont:hover{
   background-color: $sixthColor;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .clientList{
   flex:1;
   padding: .5em;
   text-align: center;
+}
+
+.clientImage{
+  flex: .1;
 }
 
 
