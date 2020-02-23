@@ -10,7 +10,7 @@ function MenuItem({icon,title, highlight}, setCurrentPage={setCurrentPage}){
     }
 
     return(
-        <div className={currentP} onClick={()=>{setCurrentPage({title})}}>
+        <div className={currentP}>
             <i className='itemIcon'>{icon}</i>
             <p className='title'>{title}</p>
         </div>
