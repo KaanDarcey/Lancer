@@ -6,6 +6,8 @@ import Header from '../../comps/HeaderBar';
 import Button from '../../comps/Button';
 import {FaSortAmountUp, FaSearch} from 'react-icons/fa'
 import Search from '../../comps/Search';
+
+import PopUp from '../../comps/PopUp';
 import {MdMoreVert} from "react-icons/md";
 
 var icon = <MdMoreVert/>;
@@ -77,8 +79,9 @@ function ProjectPage(){
                 headerTitle="Projects"
                 iconTitle="Sort"
                 icon={<FaSortAmountUp/>}
-                btn={<Button
-                title="Create Project"/>}
+                btn={
+                  <Button title="Create Project"/>
+                }
             />
             <div className='ProjectPage-search'>
                 <Search

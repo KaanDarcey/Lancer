@@ -18,6 +18,6 @@
     &:active, &:hover {
         background-color: $secondaryColor;
         color:$primaryFontColor;
-        outline: 1px $primaryFontColor solid;
+        outline: 1px #D3D3D3 solid;
     }
 }
