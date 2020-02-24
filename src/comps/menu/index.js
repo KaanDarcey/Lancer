@@ -2,7 +2,7 @@ import React from 'react';
 import './menu.scss';
 import MenuItem from './MenuItem';
 import Button from '../Button';
-import {FaCalendarAlt, FaChartBar, FaRegUserCircle, FaPowerOff, FaUsers, FaProjectDiagram} from 'react-icons/fa';
+import {FaCalendarAlt, FaChartBar, FaRegUserCircle, FaPowerOff, FaUsers, FaProjectDiagram, FaReact} from 'react-icons/fa';
 
 import {
   BrowserRouter as Router,
@@ -20,11 +20,12 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
                 <h3 className='menu-logo-title'>LANCER</h3>
             </div>
             <nav className='menu-center' >
-                <NavLink to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
-                <NavLink to="/SchedulePage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaCalendarAlt />} title='Schedule' /></NavLink>
-                <NavLink to="/ProjectPage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
-                <NavLink to="/ClientPage" activeClassName={active} style={{ color: 'inherit', textDecoration: 'inherit'}}><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>
-                <NavLink to="/" ><MenuItem icon={<FaRegUserCircle style={{ color: 'inherit', textDecoration: 'inherit'}}/>} title='Account' /></NavLink>
+                <NavLink to="/" className='menu-item'><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
+                <NavLink to="/SchedulePage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaCalendarAlt />} title='Schedule' /></NavLink>
+                <NavLink to="/ProjectPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
+                <NavLink to="/ClientPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>
+                <NavLink to="/" className='menu-item' ><MenuItem icon={<FaRegUserCircle />} title='Account' /></NavLink>
+                <NavLink to="/Components" className='menu-item'  activeClassName={active}><MenuItem icon={<FaReact />} title='Components' /></NavLink>
             </nav>
             <div className='menu-bottom'>
                 <Button title="Upgrade Now"/>

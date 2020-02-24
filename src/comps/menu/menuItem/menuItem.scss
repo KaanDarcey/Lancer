@@ -6,8 +6,8 @@
     @include flex($dir:row, $just:left, $align:center);
     background-color: rgba(0,0,0,0);
     color:$secondaryColor;
-    padding:$padd;
     font-size: 12pt;
+    text-decoration: none;
 
     &:active, &:hover {
         background-color: $secondaryColor;
