@@ -1,6 +1,7 @@
 import React from 'react';
 import './projectItem.scss';
 import Checkbox from '../../Checkbox';
+import ProgressBar from '../../ProgressBar';
 
 import {
   BrowserRouter as Router,
@@ -16,11 +17,8 @@ function ProjectItem({projectName, clientName, endDate, status, act}){
         <div className="listItem projectName">{projectName}</div>
         <div className="listItem">{clientName}</div>
         <div className="listItem">{endDate}</div>
-        <div className="listItem progressBar">
-          {status}
-          <div className="progressCont">
-          <div className="progressValue" style={{width: `${status}`}}></div>
-          </div>
+        <div className="listItem">
+          <ProgressBar status={status}/>
         </div>
         <div className="listItem checkbox">
           <Checkbox/>
