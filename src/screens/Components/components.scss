@@ -1,0 +1,31 @@
+@import '../../App.scss';
+
+.components{
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  margin-left: 300px;
+  padding: 1em 2em;
+
+  .comp-section{
+    margin: 3em;
+  }
+
+  .comp-name{
+    font-size: $subHSize;
+  }
+
+  .comp{
+    border: 1px solid $primaryColor;
+    @include flex($dir:row, $just:center, $align:center);
+    border-radius: 5px;
+    padding: 1em;
+  }
+
+  .code{
+    margin-top: 1em;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    white-space: pre-wrap;
+  }
+}

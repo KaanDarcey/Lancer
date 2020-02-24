@@ -8,6 +8,18 @@ import List from '../../comps/List';
 
 import {FaPlayCircle} from 'react-icons/fa';
 
+var TaskItems = [
+  {
+    listItem01:"Prototyping Figma",
+    listItem02:"3 PM - 5 PM",
+  },
+  {
+    listItem01:"Meeting with David",
+    listItem02:"9:30 PM - 10:38 PM",
+  },
+];
+
+
 function AddTaskPage(){
 
     var taskFormTitles = ["Client Name", "Project Name", "Email", "Phone", "Address", "Start Date", "End Date"];
@@ -34,8 +46,10 @@ function AddTaskPage(){
                         <p className='AddTaskPage-current-title'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                     <div className='AddTaskPage-taskList'>
-                    <h2 className='AddTaskPage-current-title'>All Tasks </h2>
-                        <List />
+                        <List
+                          listTitle="VIEW TASKS"
+                          items={TaskItems}
+                          />
                     </div>
                 </div>
             </div>
