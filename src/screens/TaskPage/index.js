@@ -7,7 +7,32 @@ import Timer from '../../comps/Timer';
 import AddForm from '../../comps/Form/AddForm';
 import List from '../../comps/List';
 
-import {FaPlayCircle} from 'react-icons/fa';
+import {FaPlayCircle, FaEdit} from 'react-icons/fa';
+import ListItem from '../../comps/List/ListItem';
+
+var icon = <FaEdit/>;
+
+var TaskItems = [
+  {
+    listItem01:"Prototyping Figma",
+    listItem02:"3 PM - 5 PM",
+    listItem03:"1:08",
+    listItem04:icon,
+  },
+  {
+    listItem01:"Meeting with David",
+    listItem02:"9:30 PM - 10:38 PM",
+    listItem03:"1:08",
+    listItem04:icon,
+  },
+  {
+    listItem01:"User Testing",
+    listItem02:"9:30 PM - 10:38 PM",
+    listItem03:"1:08",
+    listItem04:icon,
+  }
+];
+
 
 function TaskPage(){
 
@@ -41,8 +66,7 @@ function TaskPage(){
                         />
                     </div>
                     <div className='TaskPage-taskList'>
-                    <h2 className='TaskPage-current-title'>All Tasks </h2>
-                        <List />
+                        <List listTitle="ALL TASKS" items={TaskItems}/>
                     </div>
                 </div>
             </div>
