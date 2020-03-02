@@ -28,7 +28,9 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
                 <NavLink to="/Components" className='menu-item'  activeClassName={active}><MenuItem icon={<FaReact />} title='Components' /></NavLink>
             </nav>
             <div className='menu-bottom'>
+            <NavLink to="/UpgradePage">
                 <Button title="Upgrade Now"/>
+            </NavLink>
                 <MenuItem icon={<FaPowerOff />} title='Log Out' highlight={active}/>
             </div>
 

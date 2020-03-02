@@ -1,0 +1,15 @@
+@import '../../App.scss';
+
+.UpgradePage-container {
+    display:"flex"; 
+    flex-direction:"column";
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+}
+
+.UpgradePage-content {
+    display: flex;
+    @include flex($dir:row, $just:space-around, $align:center);
+    padding-top: 30px;
+}
