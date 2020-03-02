@@ -8,8 +8,10 @@ import SchedulePage from './screens/SchedulePage';
 import AddTaskPage from './screens/AddTaskPage';
 import ClientOverviewPage from './screens/ClientOverviewPage';
 import Components from './screens/Components';
+import UpgradePage from './screens/UpgradePage';
 
 import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
+
 
 function App() {
 
@@ -38,6 +40,9 @@ function App() {
           </Route>
           <Route path='/Components'>
             <Components/>
+          </Route>
+          <Route path="/UpgradePage">
+            <UpgradePage />
           </Route>
         </Switch>
     </div>

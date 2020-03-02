@@ -1,0 +1,57 @@
+@import '../../App.scss';
+
+.upgrade-container {
+    width: 300px;
+    height:550px;
+
+    &:hover {
+        transform:scale(1.02);
+    }
+}
+
+.upgrade-popular {
+    @include flex($dir:column,$just:center,$align:center);
+    height:50px;
+}
+
+.upgrade-popular-active {
+    @include flex($dir:column,$just:center,$align:center);
+    height:50px;
+    background-color: $thirdColor;
+    color:$secondaryColor;
+}
+
+.upgrade-content {
+    @include flex($dir:column,$just:space-between,$align:center);
+    padding:10px;
+    height:100%;
+    width:100%;
+    border:2px #F1F1F1 solid;
+}
+
+.upgrade-content-unpopular {
+    border-top-width: 5px;
+    border-top-color: $highlights;
+}
+
+.upgrade-title {
+    color:$highlights;
+}
+
+.upgrade-features-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.upgrade-features-item {
+    margin:10px;
+}
+
+.upgrade-price {
+    text-align: center;
+}
+
+.upgrade-price-value {
+    font-size: 60pt;
+    margin:0px;
+}
