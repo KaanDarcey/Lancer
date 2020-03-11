@@ -2,11 +2,14 @@ import React from 'react';
 import './upgrade.scss';
 import Button from '../Button';
 
-function Upgrade({title, feat, price, time, popular}){
+import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
+
+function Upgrade({title, feat, price, time, popular, btn}){
 
     var active = 'upgrade-popular',
         pop = null,
-        topBlue = 'upgrade-content';
+        topBlue = 'upgrade-content',
+        btnDisp = <NavLink to="/BillingPage"><Button title='REGISTER' /></NavLink>;
 
     if(popular == 'true'){
         active = 'upgrade-popular-active';
@@ -17,6 +20,12 @@ function Upgrade({title, feat, price, time, popular}){
         active = 'upgrade-popular';
         pop = null;
         topBlue = 'upgrade-content upgrade-content-unpopular';
+    }
+
+    if(btn === 'true'){
+        btnDisp = <NavLink to="/BillingPage"><Button title='REGISTER' /></NavLink>;
+    } else {
+        btnDisp = null;
     }
 
     return(
@@ -38,7 +47,7 @@ function Upgrade({title, feat, price, time, popular}){
                     <h2 className='upgrade-price-value'>{price}</h2>
                     <h4 className='upgrade-price-time'>{time}</h4>
                 </div>
-                <Button title='REGISTER' />
+                {btnDisp}
             </div>
         </div>
     )
@@ -49,7 +58,8 @@ Upgrade.defaultProps = {
     feat:['- default feature', '- default feature', '- default feature', '- default feature'],
     price:'$0',
     time:'per month',
-    popular:'true'
+    popular:'true',
+    btn:'true'
 }
 
 export default Upgrade;
