@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.CreditForm-form {
+    width: 100%;
+    @include flex($dir:column,$just:center,$align:center);
+}
+
+.CreditForm-terms {
+    @include flex($dir:row,$just:center,$align:center);
+    margin:30px;
+}
+
+.CreditForm-row {
+    @include flex($dir:row,$just:space-between,$align:center);
+    margin:10px;
+}
+
+.CreditForm-form-input {
+    border: none;
+    border-bottom: 1px #F1F1F1 solid;
+    padding:10px;
+    margin: 10px;
+}
