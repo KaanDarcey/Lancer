@@ -1,0 +1,24 @@
+@import '../../App.scss';
+
+.BillingPage-container {
+    display:"flex"; 
+    flex-direction:"column";
+    flex:4;
+    margin-left: 300px;
+    padding:10px;
+}
+
+.BillingPage-content {
+    display: flex;
+    @include flex($dir:row, $just:space-around, $align:center);
+    padding-top: 30px;
+}
+
+.BillingPage-form {
+    height:550px;
+    @include flex($dir:column, $just:space-around, $align:center);
+}
+
+.BillingPage-form-header-text{
+    text-align: center;
+}

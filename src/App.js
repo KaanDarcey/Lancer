@@ -9,8 +9,10 @@ import AddTaskPage from './screens/AddTaskPage';
 import ClientOverviewPage from './screens/ClientOverviewPage';
 import Components from './screens/Components';
 import UpgradePage from './screens/UpgradePage';
+import BillingPage from './screens/BillingPage';
 
 import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
+
 
 
 function App() {
@@ -43,6 +45,9 @@ function App() {
           </Route>
           <Route path="/UpgradePage">
             <UpgradePage />
+          </Route>
+          <Route path="/BillingPage">
+            <BillingPage />
           </Route>
         </Switch>
     </div>
