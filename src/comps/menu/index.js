@@ -25,7 +25,7 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
                 <NavLink to="/ProjectPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
                 <NavLink to="/ClientPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>
                 <NavLink to="/" className='menu-item' ><MenuItem icon={<FaRegUserCircle />} title='Account' /></NavLink>
-                <NavLink to="/Components" className='menu-item'  activeClassName={active}><MenuItem icon={<FaReact />} title='Components' /></NavLink>
+                {/* <NavLink to="/Components" className='menu-item'  activeClassName={active}><MenuItem icon={<FaReact />} title='Components' /></NavLink> */}
             </nav>
             <div className='menu-bottom'>
             <NavLink to="/UpgradePage">
