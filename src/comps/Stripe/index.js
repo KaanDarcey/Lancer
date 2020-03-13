@@ -1,5 +1,6 @@
 import React from 'react';
 import './stripe.scss';
+import Button from '../Button';
 
 import {loadStripe} from '@stripe/stripe-js';
 import {
@@ -23,16 +24,12 @@ const CARD_OPTIONS = {
     base: {
       iconColor: '#e3e1e1',
       color: '#284b63',
-      fontWeight: 500,
-      fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-      fontSize: '16px',
+      fontSize: '11pt',
       fontSmoothing: 'antialiased',
-      ':-webkit-autofill': {color: '#fce883'},
-      '::placeholder': {color: '#e3e1e1'},
     },
     invalid: {
-      iconColor: '#ffc7ee',
-      color: '#ffc7ee',
+      iconColor: '#dc3545',
+      color: '#dc3545',
     },
   },
 };
@@ -49,34 +46,64 @@ function StripeForm({}){
         const {error, paymentMethod} = await stripe.createPaymentMethod({
             type: 'card',
             card: elements.getElement(CardElement),
+            billing_details: {
+              name: document.getElementById('billingName').value,
+              address:{
+                country: document.getElementById('country').value
+              }
+            },
           });
 
           if(error){
               console.log(error)
           }else{
               console.log("payment", paymentMethod);
+
+              document.querySelector('.result').style.display = 'flex';
+
+              var result = JSON.stringify(paymentMethod, null, 2);
+
+              document.querySelector("pre").textContent = result;
+              document.querySelector('.FormGroup').style.display='none';
+
               //fetch server to get the clientSecret
               const clientSecret = await fetch("http://localhost:8888/pay.php");
 
               //user server secret to communicate back to stripe
               const data = stripe.confirmCardPayment(clientSecret, {
-                payment_method: paymentMethod  
+              // const data = await stripe.confirmCardPayment('{CLIENT_SECRET}', {
+                payment_method: paymentMethod
               });
 
               if(data.success){
                   //unlock feature!
+                  
               }
           }
     };
     return(
+      <div>
         <form className="FormGroup" onSubmit={Pay}>
-            <h3>Pay with Credit Card</h3>
-
-            <div className="FormRow">
-                  <CardElement options={CARD_OPTIONS} />
-                </div>
-                    <button type="submit">Pay Transaction</button>
-                    </form>
+          <h3>Payment Method</h3>
+          <div className="FormRow">
+            <input type="text" placeholder='Name' id="billingName" className="StripeElement" required/>
+          </div>
+          <div className="FormRow">
+                <CardElement options={CARD_OPTIONS} />
+          </div>
+          <div className="FormRow">
+           <select id="country" className="StripeElement">
+            <option selected value="CA">Canada</option>
+            <option value="US">United States</option>
+          </select>
+          </div>
+          <button className="submitBtn" type="submit">Upgrade</button>
+        </form>
+        <div className="result">
+        <h3>Payment Completed</h3>
+        <pre className="payment-result"></pre>
+        </div>        
+</div>
                 );
             };
 
