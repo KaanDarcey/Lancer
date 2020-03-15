@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ClientPage.scss';
 
 import Header from '../../comps/HeaderBar';
@@ -6,6 +6,8 @@ import Button from '../../comps/Button';
 import ClientList from '../../comps/ClientList';
 import {FaSortAmountUp, FaEdit, FaSearch, FaRegUserCircle} from 'react-icons/fa'
 import Search from '../../comps/Search';
+
+import PopUp from '../../comps/PopUp';
 
 function ClientPage() {
 
@@ -71,6 +73,18 @@ function ClientPage() {
         },
       ];
 
+      //pop up
+
+      const [showPop, setShowPop] = useState(false);
+
+      var pop = null;
+
+      if(showPop === true){
+        pop = <PopUp caption='Add Client' />;
+      } else {
+        pop = null;
+      }
+
     return (
         <div className='ClientPage-container '>
             <Header
@@ -78,7 +92,9 @@ function ClientPage() {
                 iconTitle="Sort"
                 icon={<FaSortAmountUp/>}
                 btn={<Button
-                title="New Client"/>}
+                title="New Client"
+                onClick = {()=>{setShowPop(true)}}
+                />}
             />
             <div className='ClientPage-search'>
                 <div className='ClientPage-btn'>
@@ -94,6 +110,7 @@ function ClientPage() {
             titles={ClientTitles}
             items={ClientItems}
             />
+            {pop}
         </div>
     )
   }

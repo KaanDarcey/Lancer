@@ -10,8 +10,12 @@ import ClientOverviewPage from './screens/ClientOverviewPage';
 import Components from './screens/Components';
 import UpgradePage from './screens/UpgradePage';
 import BillingPage from './screens/BillingPage';
+import DashboardPage from './screens/DashboardPage';
+import AnalyticsPage from './screens/DashboardPage/AnalyticsPage';
 
 import { BrowserRouter as Router, Route, Switch , NavLink} from 'react-router-dom';
+import AdvancedAnalyticsPage from './screens/DashboardPage/AdvancedAnalyticsPage';
+
 
 
 
@@ -22,6 +26,9 @@ function App() {
     <div className="App" style={{display:'flex', flexDirection:'row', height:'100vh', width:'100vw'}}>
       <Menu />
       <Switch>
+      <Route path="/DashboardPage">
+            <DashboardPage />
+          </Route>
           <Route path="/ProjectPage">
             <ProjectPage />
           </Route>
@@ -48,6 +55,12 @@ function App() {
           </Route>
           <Route path="/BillingPage">
             <BillingPage />
+          </Route>
+          <Route path="/AnalyticsPage">
+            <AnalyticsPage />
+          </Route>
+          <Route path="/AdvancedAnalyticsPage">
+            <AdvancedAnalyticsPage />
           </Route>
         </Switch>
     </div>

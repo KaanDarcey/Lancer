@@ -2,12 +2,14 @@
 
 .popUp-shadow {
     width: 100%;
+    margin-left: -10px;
     height: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0,0,0,0.7);
+    top:0px;
 }
 
 .popUp-border {
@@ -16,6 +18,7 @@
     background: linear-gradient(180deg, rgba(40,75,99,1) 0%, rgba(54,142,223,1) 100%);
 
     position: absolute;
+
 
     @include flex($dir:column, $just:center, $align:center);
 }

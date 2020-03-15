@@ -4,7 +4,7 @@ import './counter.scss';
 function Counter({value, title, clr}){
     return(
         <div className='counter-container'>
-            <h3 className='counter-title' style={{color:clr}}>{title}</h3>
+            <h3 className='counter-title'>{title}</h3>
             <h2 className='counter-value' style={{color:clr}}>{value}</h2>
         </div>
     )

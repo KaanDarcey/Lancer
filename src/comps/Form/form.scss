@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
 .form-container {
-    width:100%;
+    width:400px;
     height:400px;
     @include flex($dir:column, $just:flex-end, $align:flex-end);
     position: relative;
