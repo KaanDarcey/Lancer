@@ -11,12 +11,13 @@
 .BillingPage-content {
     display: flex;
     @include flex($dir:row, $just:space-around, $align:center);
-    padding-top: 30px;
+    // padding-top: 30px;
 }
 
 .BillingPage-form {
     height:550px;
-    @include flex($dir:column, $just:space-around, $align:center);
+    @include flex($dir:column, $just:flex-start, $align:center);
+    padding-top: 50px;
 }
 
 .BillingPage-form-header-text{

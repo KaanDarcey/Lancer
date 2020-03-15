@@ -1,0 +1,85 @@
+@import '../../App.scss';
+
+.FormGroup {
+  padding: 5em 2em;
+  border-style: none;
+  background-color: $secondaryColor;
+  will-change: opacity, transform;
+  // box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
+  // border-radius: 4px;
+  @include flex($dir:column, $just:space-around, $align:center);
+}
+
+.FormRow {
+  width: 400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 2.5em;
+  @include flex($dir:column, $just:center, $align:center);
+}
+
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+  color: $primaryColor;
+  font-size: 11pt;
+  border: none;
+  border-bottom: .1em solid $fifthColor;
+}
+
+input[type=text]{
+  padding: 1em 1.5em;
+}
+
+::placeholder{
+  color: '#e3e1e1'
+}
+
+#country{
+  appearance: none;
+  background: url(../../imgs/chevron-down-solid.svg) no-repeat;
+  background-position: 25em;
+  background-size: 16px 16px;
+}
+
+
+.submitBtn{
+  width: 95%;
+  height:40px;
+  background-color: $highlights;
+  color:$secondaryColor;
+  padding: $padd;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  font-size: $titleSize;
+  font-weight: $titleWeight;
+
+  &:active, &:hover {
+    background-color: $secondaryColor;
+    color:$primaryFontColor;
+    outline: 1px #D3D3D3 solid;
+  }
+}
+
+.result{
+  display: none;
+  flex-direction: column;
+  padding: 2em;
+  border-style: none;
+  background-color: $secondaryColor;
+  will-change: opacity, transform;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.CheckTerms{
+  flex-direction: row;
+}
