@@ -1,6 +1,6 @@
-@import '../../App.scss';
+@import '../../../App.scss';
 
-.DashboardPage-container {
+.AdvancedAnalyticsPage-container {
     display:"flex"; 
     flex-direction:"column";
     flex:4;
@@ -8,28 +8,27 @@
     padding:10px;
 }
 
-.DashboardPage-content {
+.AdvancedAnalyticsPage-content {
     display: flex;
     @include flex($dir:column, $just:space-around, $align:center);
     padding-top: 30px;
 }
 
-.DashboardPage-section {
+.AdvancedAnalyticsPage-section {
     @include flex($dir:row, $just:space-around, $align:center);
     margin:10px;
 }
 
-.DashboardPage-weekMonth {
-    width: 90%;
-    @include flex($dir:column, $just:flex-start, $align:left);
+.AdvancedAnalyticsPage-section-counters {
+    margin-top: 100px;
 }
 
-.DashboardPage-counters {
+.AdvancedAnalyticsPage-counters {
     @include flex($dir:row, $just:space-around, $align:center);
     text-align: center;
 }
 
-.DashboardPage-counter-section {
+.AdvancedAnalyticsPage-counter-section {
     height: 200px;
     margin:10px;
     padding:10px;
@@ -40,11 +39,11 @@
     }
 }
 
-.DashboardPage-counter-header {
+.AdvancedAnalyticsPage-counter-header {
     @include flex($dir:row,$just:left,$align:center);
 }
 
-.DashboardPage-bar {
+.AdvancedAnalyticsPage-bar {
     margin-top:50px;
     @include flex($dir:column,$just:left,$align:left);
 
@@ -54,7 +53,7 @@
     }
 }
 
-.DashboardPage-pie {
+.AdvancedAnalyticsPage-pie {
     @include flex($dir:column,$just:center,$align:center);
     width:300px;
     height: 300px;
@@ -63,22 +62,19 @@
 }
 
 .BarGraph-pie-hole {
-    width:150px;
-    height:150px;
-    border-radius: 75px;
+    width:200px;
+    height:200px;
+    border-radius: 100px;
     background-color: white;
     position: absolute;
-}
-
-.DashboardPage-section-blur {
-    filter: blur(5px);
-}
-
-.DashboardPage-section-btn {
-    position: absolute;
-    // bottom:-150px;
-}
-
-.DashboardPage-filter {
     @include flex($dir:column,$just:center,$align:center);
+    font-size: 24pt;
+}
+
+.BarGraph-pie-hole2 {
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
 }
