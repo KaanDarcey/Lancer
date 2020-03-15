@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.tab-container {
+    width:300px;
+    height:100px;
+    margin:10px;
+    border:2px solid #F1F1F1;
+    border-radius: 10px;
+    @include flex($dir:column,$just:center,$align:center);
+    padding:10px;
+
+    &:active, &:hover {
+        border:2px solid $highlights;
+        color: $highlights;
+    }
+}
+
+.tab-title {
+    margin:0px;
+}
+
+.tab-value {
+    margin:0px;
+    font-size: 30pt;
+}
+
+.tab-active{
+    border:2px solid $highlights;
+    color: $highlights;
+}
