@@ -2,12 +2,13 @@
 
 .counter-container {
     width:200px;
-    height:200px;
+    height:175px;
     background-color: $sixthColor;
     @include flex($dir:column, $just:center, $align:center);
     padding:10px;
     border-radius: 5px;
     margin: 10px;
+    text-align: center;
 }
 
 .counter-title {
@@ -23,7 +24,7 @@
     color:$primaryColor;
     font-family: $primaryFont;
     // color:$primaryColor;
-    font-size: 100pt;
+    font-size: 50pt;
     font-weight: $headerWeight;
     margin: 0px;
     // margin-top: 20px;

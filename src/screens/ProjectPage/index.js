@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ProjectPage.scss';
 
 import ProjectList from '../../comps/ProjectList';
@@ -73,6 +73,19 @@ var ProjectTitles = [
 ];
 
 function ProjectPage(){
+
+        //pop up
+
+        const [showPop, setShowPop] = useState(false);
+
+        var pop = null;
+  
+        if(showPop === true){
+          pop = <PopUp caption='Add Project' />;
+        } else {
+          pop = null;
+        }
+
     return (
         <div className='ProjectPage-container'>
             <Header
@@ -80,7 +93,9 @@ function ProjectPage(){
                 iconTitle="Sort"
                 icon={<FaSortAmountUp/>}
                 btn={
-                  <Button title="Create Project"/>
+                  <Button title="Create Project"
+                          onClick = {()=>{setShowPop(true)}}
+                  />
                 }
             />
             <div className='ProjectPage-search'>
@@ -92,6 +107,7 @@ function ProjectPage(){
             titles={ProjectTitles}
             items={ProjectItems}
             />
+            {pop}
         </div>
     )
   }

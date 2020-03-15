@@ -3,13 +3,13 @@ import './popUp.scss';
 import {FaWindowClose} from 'react-icons/fa';
 import Form from '../Form';
 
-function PopUp({title, info, disp}){
+function PopUp({caption, info, disp}){
     return(
         <div className='popUp-shadow'>
             <div className='popUp-border'>
                 <div className='popUp-container'>
                 <FaWindowClose className='popUp-close' size={25}/>
-                <h2 className='popUp-title'>{title}</h2>
+                <h2 className='popUp-title'>{caption}</h2>
                 {disp}
                 </div>
             </div>
@@ -18,8 +18,8 @@ function PopUp({title, info, disp}){
 }
 
 PopUp.defaultProps = {
-    title:'DEFAULT',
-    disp:<Form />
+    caption:'DEFAULT',
+    disp:<Form />,
 };
 
 export default PopUp;
