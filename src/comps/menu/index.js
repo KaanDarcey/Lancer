@@ -20,7 +20,7 @@ function Menu({logo, active}, setCurrentPage={setCurrentPage}){
                 <h3 className='menu-logo-title'>LANCER</h3>
             </div>
             <nav className='menu-center' >
-                <NavLink to="/" className='menu-item'><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
+                <NavLink to="/DashboardPage" className='menu-item' activeClassName={active}><MenuItem icon={<FaChartBar />} title='Dashboard' /></NavLink>
                 <NavLink to="/SchedulePage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaCalendarAlt />} title='Schedule' /></NavLink>
                 <NavLink to="/ProjectPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaProjectDiagram />} title='Projects' /></NavLink>
                 <NavLink to="/ClientPage" className='menu-item' activeClassName={active} ><MenuItem icon={<FaUsers />} title='Clients' /></NavLink>

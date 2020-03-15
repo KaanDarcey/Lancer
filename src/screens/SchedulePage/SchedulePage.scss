@@ -13,7 +13,26 @@
 
 .SchedulePage-footer {
     @include flex($dir:row, $just:center, $align:center);
-    padding:20px;
-    width: 90%;
-    overflow: hidden;
+    // padding:20px;
+    width: 100%;
+    overflow: visible;
+}
+
+.SchedulePage-counter-header {
+    @include flex($dir:row, $just:left, $align:center);
+    h3 {
+        font-size: 16pt;
+        margin-left: 10px;
+    }
+}
+
+.SchedulePage-counter-section {
+    @include flex($dir:column, $just:left, $align:left);
+    margin:10px;
+    padding:10px;
+    height:200px;
+}
+
+.SchedulePage-counters {
+    @include flex($dir:row, $just:center, $align:center);
 }

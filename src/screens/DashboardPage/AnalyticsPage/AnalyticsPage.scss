@@ -1,6 +1,6 @@
-@import '../../App.scss';
+@import '../../../App.scss';
 
-.DashboardPage-container {
+.AnalyticsPage-container {
     display:"flex"; 
     flex-direction:"column";
     flex:4;
@@ -8,28 +8,28 @@
     padding:10px;
 }
 
-.DashboardPage-content {
+.AnalyticsPage-content {
     display: flex;
     @include flex($dir:column, $just:space-around, $align:center);
     padding-top: 30px;
 }
 
-.DashboardPage-section {
+.AnalyticsPage-section {
     @include flex($dir:row, $just:space-around, $align:center);
     margin:10px;
 }
 
-.DashboardPage-weekMonth {
+.AnalyticsPage-weekMonth {
     width: 90%;
     @include flex($dir:column, $just:flex-start, $align:left);
 }
 
-.DashboardPage-counters {
+.AnalyticsPage-counters {
     @include flex($dir:row, $just:space-around, $align:center);
     text-align: center;
 }
 
-.DashboardPage-counter-section {
+.AnalyticsPage-counter-section {
     height: 200px;
     margin:10px;
     padding:10px;
@@ -40,11 +40,11 @@
     }
 }
 
-.DashboardPage-counter-header {
+.AnalyticsPage-counter-header {
     @include flex($dir:row,$just:left,$align:center);
 }
 
-.DashboardPage-bar {
+.AnalyticsPage-bar {
     margin-top:50px;
     @include flex($dir:column,$just:left,$align:left);
 
@@ -54,7 +54,7 @@
     }
 }
 
-.DashboardPage-pie {
+.AnalyticsPage-pie {
     @include flex($dir:column,$just:center,$align:center);
     width:300px;
     height: 300px;
@@ -68,17 +68,4 @@
     border-radius: 75px;
     background-color: white;
     position: absolute;
-}
-
-.DashboardPage-section-blur {
-    filter: blur(5px);
-}
-
-.DashboardPage-section-btn {
-    position: absolute;
-    // bottom:-150px;
-}
-
-.DashboardPage-filter {
-    @include flex($dir:column,$just:center,$align:center);
 }

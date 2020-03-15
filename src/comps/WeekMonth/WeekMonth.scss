@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+
+.WeekMonth-container {
+    @include flex($dir:row,$just:space-between,$align:center);
+    width:120px;
+    padding:5px;
+}
+
+.WeekMonth-unactive {
+    color:#F1F1F1;
+
+    &:hover {
+        color:$thirdColor;
+    }
+}
+
+.WeekMonth-active {
+    color:$thirdColor;
+}

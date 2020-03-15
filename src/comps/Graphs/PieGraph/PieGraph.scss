@@ -1,0 +1,27 @@
+@import '../../../App.scss';
+
+.AdvancedAnalyticsPage-pie {
+    @include flex($dir:column,$just:center,$align:center);
+    width:300px;
+    height: 300px;
+    padding:30px;
+
+}
+
+.BarGraph-pie-hole {
+    width:200px;
+    height:200px;
+    border-radius: 100px;
+    background-color: white;
+    position: absolute;
+    @include flex($dir:column,$just:center,$align:center);
+    font-size: 24pt;
+}
+
+.BarGraph-pie-hole2 {
+    width:100px;
+    height:100px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+}
