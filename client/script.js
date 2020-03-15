@@ -4,7 +4,7 @@ var stripe;
 var orderData = {
   items: [{ id: "prolancer-subscription" }],
   currency: "cad",
-  customer: "cus_GtWqjhVAVEXDZJ"
+  customer: "cus_GtWqjhVAVEXDZJ"  //Customer ID ceated in stripe dashboard
 };
 
 // Disable the button until we have Stripe set up on the page
@@ -137,6 +137,8 @@ var orderComplete = function(clientSecret) {
 
     console.log(result);
     document.querySelector(".sr-payment-form").classList.add("hidden");
+    document.querySelector(".header").classList.add("hidden");
+    document.querySelector(".subHeader").classList.add("hidden");
     document.querySelector("pre").textContent = paymentIntentJson;
 
     document.querySelector(".sr-result").classList.remove("hidden");

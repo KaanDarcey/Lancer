@@ -15,7 +15,7 @@
 }
 body {
   font-size: 16px;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Work Sans', sans-serif;
 }
 
 /* Layout */
@@ -38,9 +38,9 @@ body {
   height: 100%;
   align-self: center;
   padding: 75px 50px;
-  background: var(--body-color);
   width: var(--form-width);
   border-radius: var(--radius);
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .sr-field-error {
@@ -54,15 +54,11 @@ body {
 /* Inputs */
 .sr-input,
 input[type="text"] {
-  border: 1px solid var(--gray-border);
-  border-radius: var(--radius);
+  
   padding: 5px 12px;
   height: 44px;
   width: 100%;
-  transition: box-shadow 0.2s ease;
-  background: white;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  border-bottom: .1em solid #e3e1e1;
   appearance: none;
 }
 
@@ -91,23 +87,11 @@ button {
   color: white;
   border: 0;
   padding: 12px 16px;
-  margin-top: 16px;
+  margin-top: 2.5em;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
   display: block;
   width: 100%;
-}
-button:hover {
-  filter: contrast(115%);
-}
-button:active {
-  transform: translateY(0px) scale(0.98);
-  filter: brightness(0.9);
-}
-button:disabled {
-  opacity: 0.5;
-  cursor: none;
 }
 
 /* Code block */

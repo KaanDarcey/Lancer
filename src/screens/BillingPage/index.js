@@ -21,10 +21,10 @@ function BillingPage(){
             <div className='BillingPage-content'>
                 <Upgrade title='PRO-LANCER' price='$20' feat={feat3} popular='false' btn='false'/>
                 <div className='BillingPage-form'>
-                    {/* <div class='BillingPage-form-header-text'>
+                    <div class='BillingPage-form-header-text'>
                         <h3 className='BillingPage-form-header'>Enter Your Credit Card Information</h3>
-                        <p className='BillingPage-form-subhead'>Pro Lancer 1 Month</p>
-                    </div> */}
+                        <p className='BillingPage-form-subhead'>Pro-Lancer Monthly Plan</p>
+                    </div>
                     {/* <CreditForm /> */}
                     <Stripe/>
                 </div>

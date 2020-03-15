@@ -1,6 +1,7 @@
 import React from 'react';
 import './stripe.scss';
 import Button from '../Button';
+import Checkbox from '../Checkbox';
 
 import {loadStripe} from '@stripe/stripe-js';
 import {
@@ -34,7 +35,7 @@ const CARD_OPTIONS = {
   },
 };
 
-//The actual form iteself
+//The actual form itself
 
 function StripeForm({}){
     const stripe = useStripe();
@@ -65,6 +66,7 @@ function StripeForm({}){
 
               document.querySelector("pre").textContent = result;
               document.querySelector('.FormGroup').style.display='none';
+              document.querySelector('.BillingPage-form-header-text').style.display='none';
 
               //fetch server to get the clientSecret
               const clientSecret = await fetch("http://localhost:8888/pay.php");
@@ -84,7 +86,6 @@ function StripeForm({}){
     return(
       <div>
         <form className="FormGroup" onSubmit={Pay}>
-          <h3>Payment Method</h3>
           <div className="FormRow">
             <input type="text" placeholder='Name' id="billingName" className="StripeElement" required/>
           </div>
@@ -97,10 +98,14 @@ function StripeForm({}){
             <option value="US">United States</option>
           </select>
           </div>
-          <button className="submitBtn" type="submit">Upgrade</button>
+          <div className="FormRow CheckTerms">
+            <Checkbox />
+            <p>I agree with our Terms and Conditions</p>
+          </div>
+          <button className="submitBtn" type="submit">Buy Now</button>
         </form>
         <div className="result">
-        <h3>Payment Completed</h3>
+        <h3>Payment Method</h3>
         <pre className="payment-result"></pre>
         </div>        
 </div>
